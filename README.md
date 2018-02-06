@@ -1,6 +1,6 @@
-# GarlicGUI
+# Garlicium-Mining-GUI
 
-A simple GUI for the Garlicoin pool miners (SGMiner and CCMiner)
+A simple GUI for the Garlicium pool miners (SGMiner and CCMiner)
 
 # Read before using
 
@@ -20,7 +20,7 @@ The IP:Port used for the API is `127.0.0.1:4028`
 
  - Test that the miner works by itself before using this GUI
 
- - Make sure `Settings/Settings.ser` exists in the same directory as `GarlicGUI.jar`
+ - Make sure `Settings/Settings.ser` exists in the same directory as `Garlicium-Mining-GUI.jar`
 
  - You can use the "Extra miner flags" box to put extra flags such as pool username & password, max-temp for Nvidia GPUs, etc.
 
@@ -53,7 +53,3 @@ I am not responsible for any damage which might happen when mining. Use at your 
 # Sources
 
 Fira Sans font from https://www.fontsquirrel.com/fonts/fira-sans
-
----
-
-Donations - `GJbKUzCbAezNZuQJkahqptvT2CpYywMSFj`
