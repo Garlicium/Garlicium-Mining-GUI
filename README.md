@@ -4,9 +4,10 @@ A simple GUI for the Garlicium pool miners (SGMiner and CCMiner)
 
 # Read before using
 
-**Currently Windows only**
+ - **Currently Windows only**
+ - **Java needs to be installed to be able to run Garlicium-Mining-GUI**
 
-**Java needs to be installed to be able to run Garlicium-Mining-GUI**
+*Notes about the app:*
 
  - The default mining intensity is 12
  - The IP:Port used for the API is `127.0.0.1:4028`
@@ -14,7 +15,7 @@ A simple GUI for the Garlicium pool miners (SGMiner and CCMiner)
  - Make sure `Settings/Settings.ser` exists in the same directory as `Garlicium-Mining-GUI.jar`
  - You can use the "Extra miner flags" box to put extra flags such as pool username & password, max-temp for Nvidia GPUs, etc.
 
-The GUI only supplies these options to the miner by default:
+*The GUI only supplies these options to the miner by default:*
 
  - `--algorithm scrypt-n --nfactor 11` or `--algo=scrypt:10`
  - `-o POOL_ADDRESS`
