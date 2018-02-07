@@ -44,14 +44,13 @@ I am not responsible for any damage which might happen when mining. Use at your 
 
 # Screenshots
 
-## Setup
-
 ![screenshot](screenshot.png)
-
-## Mining
-
-![screenshot2](screenshot2.png)
 
 # Sources
 
 Fira Sans font from https://www.fontsquirrel.com/fonts/fira-sans
+
+# How does it work?
+
+When you select "start mining" on the interface, it calls the mining executable you selected with the command line arguments for your GPU.
+One of the arguments provided to the exe start a local API server on your machine, which the GUI then connects to and scrapes data from, as you mine.
