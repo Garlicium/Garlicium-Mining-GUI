@@ -4,7 +4,7 @@ A simple GUI for the Garlicium pool miners (SGMiner and CCMiner)
 
 # Read before using
 
-**Java needs to be installed to be able to run GarlicGUI**
+**Java needs to be installed to be able to run Garlicium-Mining-GUI**
 
 The default mining intensity is 12
 

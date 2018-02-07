@@ -306,11 +306,11 @@ public class MainController {
         if (GarlicGUILoggingChecked) {
             // Setup logging to file
             try {
-                logWriter = new PrintWriter("GarlicGUI.log", "UTF-8");
+                logWriter = new PrintWriter("Garlicium-Mining-GUI.log", "UTF-8");
             } catch (IOException e) {
                 StacktraceAlert.create(
                         "Log file error",
-                        "Cannot create new PrintWriter to GarlicGUI.log",
+                        "Cannot create new PrintWriter to Garlicium-Mining-GUI.log",
                         "MainController.initialize threw IOException",
                         e
                 );
@@ -337,7 +337,7 @@ public class MainController {
     @FXML
     private void openHelp() {
         try {
-            URL url = new URL("https://github.com/thatguywiththatname/GarlicGUI/blob/master/README.md");
+            URL url = new URL("https://github.com/Garlicium/Garlicium-Mining-GUI/blob/master/README.md");
             URI uri = new URI(url.getProtocol(), url.getHost(), url.getPath(), url.getQuery(), null);
             Desktop.getDesktop().browse(uri);
         } catch (URISyntaxException | IOException e) {

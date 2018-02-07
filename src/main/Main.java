@@ -15,7 +15,7 @@ public class Main extends Application {
         Font.loadFont(getClass().getResource("resources/fonts/FiraSans-Regular.otf").toExternalForm(), 10);
 
         Parent root = FXMLLoader.load(getClass().getResource("resources/fxml/mainUI.fxml"));
-        primaryStage.setTitle("GarlicGUI");
+        primaryStage.setTitle("Garlicium-Mining-GUI");
         primaryStage.setScene(new Scene(root, 900, 700));
 
         // Kill process when window closed (if "Stop mining" button not used)
