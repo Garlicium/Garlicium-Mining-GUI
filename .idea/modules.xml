@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GarlicGUI.iml" filepath="$PROJECT_DIR$/GarlicGUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Garlicium-Mining-GUI.iml" filepath="$PROJECT_DIR$/Garlicium-Mining-GUI.iml" />
     </modules>
   </component>
 </project>

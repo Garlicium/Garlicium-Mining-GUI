@@ -22,7 +22,7 @@
             <Hyperlink fx:id="helpLink" text="help" textAlignment="CENTER" onAction="#openHelp" />
         </VBox>
         <ImageView fx:id="garlicImg" fitHeight="227" fitWidth="227" preserveRatio="true">
-            <Image url="@../images/garlicoin.png" />
+            <Image url="@../images/garlicium.png" />
         </ImageView>
         <HBox alignment="CENTER" spacing="10">
             <RadioButton fx:id="NvidiaRadioButton" alignment="CENTER" minWidth="20" text="Nvidia" />
@@ -64,7 +64,7 @@
     <VBox fx:id="miningVBox" alignment="CENTER" opacity="0" spacing="30">
         <Label styleClass="title" text="GarlicGUI" textAlignment="CENTER" />
         <ImageView fitHeight="227" fitWidth="227" preserveRatio="true">
-            <Image url="@../images/garlicoin.png" />
+            <Image url="@../images/garlicium.png" />
         </ImageView>
         <HBox alignment="CENTER" minWidth="900" spacing="10">
             <Label fx:id="miningOnLabel" alignment="CENTER" text="-" />
