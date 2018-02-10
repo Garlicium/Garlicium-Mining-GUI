@@ -17,6 +17,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("resources/fxml/mainUI.fxml"));
         primaryStage.setTitle("Garlicium-Mining-GUI");
         primaryStage.setScene(new Scene(root, 900, 700));
+
         // Kill process when window closed (if "Stop mining" button not used)
         primaryStage.setOnCloseRequest(t -> {
             Platform.exit();
