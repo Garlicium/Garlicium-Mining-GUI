@@ -11,14 +11,18 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.Region?>
 <StackPane minHeight="700" minWidth="900" prefHeight="700" prefWidth="900" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.view.MainController">
-
     <VBox fx:id="setupVBox" alignment="CENTER" spacing="20">
         <VBox alignment="CENTER">
             <!-- Place these 2 closer together -->
-            <Label styleClass="title" text="GarlicGUI" textAlignment="CENTER" />
+            <HBox alignment="BASELINE_CENTER">
+                <Label styleClass="small-title" text="Garli" textAlignment="CENTER" />
+                <Label styleClass="title" text="GUI" textAlignment="CENTER" />
+                <Label styleClass="small-title" text="m" textAlignment="CENTER" />
+            </HBox>
             <Hyperlink fx:id="helpLink" text="help" textAlignment="CENTER" onAction="#openHelp" />
         </VBox>
         <ImageView fx:id="garlicImg" fitHeight="227" fitWidth="227" preserveRatio="true">
