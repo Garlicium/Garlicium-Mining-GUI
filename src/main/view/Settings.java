@@ -50,6 +50,10 @@ public class Settings {
                 StacktraceAlert.create("Exception occurred", "Does Settings/Settings.ser exist?", "Exception in Settings.getSettings", e2);
             }
         }
+
+        System.out.println(mapObj.get("firstLaunch").getClass());
+        Main.firstLaunch=mapObj.get("firstLaunch");
+        System.out.println(mapObj);
         return mapObj;
     }
 

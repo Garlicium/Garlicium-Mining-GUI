@@ -1,4 +1,6 @@
 package main.view;
+import javafx.event.EventHandler;
+import main.Main;
 
 import org.json.JSONObject;
 
@@ -35,6 +37,7 @@ public class MainController {
 
     private PrintWriter logWriter;
     private ParallelTransition setupVBBoxPTInLeft, setupVBBoxPTOutLeft;
+    private ParallelTransition postFirstLaunchInLeft, postFirstLaunchOutLeft;
     private ParallelTransition miningVBoxPTInRight;
     private ParallelTransition loggingConfigVBoxPTInRight, loggingConfigVBoxPTOutRight;
     private RotateTransition garlicImageRT;
@@ -54,6 +57,10 @@ public class MainController {
     Hyperlink helpLink;
     @FXML
     Button goButton, configLogsButton;
+    @FXML
+    Label ppl,emfl,mil;
+    @FXML
+    HBox buttonBox;
 
     @FXML
     VBox miningVBox;
@@ -74,7 +81,15 @@ public class MainController {
     // When the windows first loads
     public void initialize() {
         // Focus on the only visible VBox
+        Settings.getSettings();
         setupVBox.toFront();
+        if(Boolean.parseBoolean(Main.firstLaunch)) {
+            System.out.println("first launch");
+        }else{
+            hideSetup();
+            makeSetupButton();
+            System.out.println("not first launch");
+        }
 
         // Setup transitions
         setupVBBoxPTInLeft = Fade.createFadeInLeft(setupVBox);
@@ -111,6 +126,69 @@ public class MainController {
         setupLogging();
     }
 
+    private void makeSetupButton(){
+        Button setup = new Button("Setup");
+        setup.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                showSetup();
+                setup.setDisable(true);
+            }
+        });
+        buttonBox.getChildren().add(1,setup);
+        setup.setMinWidth(194);
+        goButton.setMinWidth(193);
+        configLogsButton.setMinWidth(193);
+    }
+
+    private void showSetup(){
+        GRLCAddressTextField.setOpacity(1.0);
+        GRLCAddressTextField.setDisable(false);
+        NvidiaRadioButton.setOpacity(1.0);
+        NvidiaRadioButton.setDisable(false);
+        AMDRadioButton.setOpacity(1.0);
+        AMDRadioButton.setDisable(false);
+        poolAddressTextField.setOpacity(1.0);
+        poolAddressTextField.setDisable(false);
+        poolPwordTextField.setOpacity(1.0);
+        poolPwordTextField.setDisable(false);
+        minerPathTextField.setOpacity(1.0);
+        minerPathTextField.setDisable(false);
+        minerIntensityTextField.setOpacity(1.0);
+        minerIntensityTextField.setDisable(false);
+        minerFlagsTextField.setOpacity(1.0);
+        minerFlagsTextField.setDisable(false);
+        minerPathButton.setOpacity(1.0);
+        minerPathButton.setDisable(false);
+        mil.setOpacity(1.0);
+        emfl.setOpacity(1.0);
+        ppl.setOpacity(1.0);
+    }
+
+    private void hideSetup(){
+        GRLCAddressTextField.setOpacity(0.0);
+        GRLCAddressTextField.setDisable(true);
+        NvidiaRadioButton.setOpacity(0.0);
+        NvidiaRadioButton.setDisable(true);
+        AMDRadioButton.setOpacity(0.0);
+        AMDRadioButton.setDisable(true);
+        poolAddressTextField.setOpacity(0.0);
+        poolAddressTextField.setDisable(true);
+        poolPwordTextField.setOpacity(0.0);
+        poolPwordTextField.setDisable(true);
+        minerPathTextField.setOpacity(0.0);
+        minerPathTextField.setDisable(true);
+        minerIntensityTextField.setOpacity(0.0);
+        minerIntensityTextField.setDisable(true);
+        minerFlagsTextField.setOpacity(0.0);
+        minerFlagsTextField.setDisable(true);
+        minerPathButton.setOpacity(0.0);
+        minerPathButton.setDisable(true);
+        mil.setOpacity(0.0);
+        emfl.setOpacity(0.0);
+        ppl.setOpacity(0.0);
+    }
+
     @FXML
     private void findMinerPath(ActionEvent event) {
         // Grab stage from event
@@ -128,6 +206,7 @@ public class MainController {
     @FXML
     private void loadAndRunMiner(){
         // Get all options
+        Main.firstLaunch="false";
         String minerPath = minerPathTextField.getText().trim();
         String poolAddress = poolAddressTextField.getText().trim();
         String poolPassword = poolPwordTextField.getText().trim();
@@ -286,6 +365,7 @@ public class MainController {
         settingsObj.put("minerFlags", minerFlagsTextField.getText().trim());
         settingsObj.put("GarlicGUILogging", String.valueOf(GarlicGUILoggingCheckBox.isSelected()));
         settingsObj.put("minerLogging", String.valueOf(minerLoggingCheckBox.isSelected()));
+        settingsObj.put("firstLaunch",Main.firstLaunch);
         Settings.setSettings(settingsObj);
     }
 
@@ -332,6 +412,12 @@ public class MainController {
         setupVBBoxPTInLeft.play();
         loggingConfigVBoxPTOutRight.play();
         setupVBox.toFront();
+    }
+
+    @FXML void backToFirstPage(){
+        saveSettings();
+        setupLogging();
+
     }
 
     @FXML

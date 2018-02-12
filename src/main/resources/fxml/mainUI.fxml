@@ -44,19 +44,19 @@
         </HBox>
         <HBox alignment="CENTER" spacing="10">
             <VBox spacing="3">
-                <Label text="Pool password" />
+                <Label fx:id="ppl" text="Pool password" />
                 <TextField fx:id="poolPwordTextField" maxWidth="193" minWidth="193" promptText="Default: none (x)" />
             </VBox>
             <VBox spacing="3">
-                <Label text="Mining intensity" />
+                <Label fx:id="mil" text="Mining intensity" />
                 <TextField fx:id="minerIntensityTextField" maxWidth="194" minWidth="194" promptText="Default: 12" />
             </VBox>
             <VBox spacing="3">
-                <Label text="Extra miner flags" />
+                <Label fx:id="emfl" text="Extra miner flags" />
                 <TextField fx:id="minerFlagsTextField" maxWidth="193" minWidth="193" promptText="e.g. --timeout=100" />
             </VBox>
         </HBox>
-        <HBox alignment="CENTER" spacing="10">
+        <HBox fx:id="buttonBox" alignment="CENTER" spacing="10">
             <Button fx:id="configLogsButton" onAction="#openLogConfig" minWidth="195" text="Configure Logging" />
             <Button fx:id="goButton" onAction="#loadAndRunMiner" minWidth="195" text="Start Mining" />
         </HBox>
