@@ -30,6 +30,7 @@ public class Settings {
             in.close();
             fileIn.close();
         } catch (IOException | ClassNotFoundException e) {
+            new File(settingsPath).delete();
             fixer();
             try {
                 FileInputStream fileIn;
