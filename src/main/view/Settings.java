@@ -51,9 +51,7 @@ public class Settings {
             }
         }
 
-        System.out.println(mapObj.get("firstLaunch").getClass());
         Main.firstLaunch=mapObj.get("firstLaunch");
-        System.out.println(mapObj);
         return mapObj;
     }
 
