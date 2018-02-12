@@ -14,8 +14,12 @@
 
 <?import javafx.scene.control.CheckBox?>
 <StackPane minHeight="700" minWidth="900" prefHeight="700" prefWidth="900" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.view.MainController">
+<<<<<<< Updated upstream
 
     <VBox fx:id="setupVBox" alignment="CENTER" spacing="20">
+=======
+    <VBox fx:id="setupVBox" alignment="CENTER" spacing="15">
+>>>>>>> Stashed changes
         <VBox alignment="CENTER">
             <!-- Place these 2 closer together -->
             <Label styleClass="title" text="GarlicGUI" textAlignment="CENTER" />
@@ -29,35 +33,32 @@
             <RadioButton fx:id="AMDRadioButton" alignment="CENTER" minWidth="20" text="AMD" />
         </HBox>
         <HBox alignment="CENTER" spacing="10">
-            <Label text="Path to miner executable" />
-            <TextField fx:id="minerPathTextField" maxWidth="400" minWidth="400" promptText="e.g. C:\Users\username\Desktop\sgminer\sgminer.exe" />
-            <Button fx:id="minerPathButton" onAction="#findMinerPath" text="Select path" />
+            <TextField fx:id="minerPathTextField" maxWidth="515" minWidth="500" promptText="Path to miner executable: e.g. C:\Users\username\Desktop\sgminer\sgminer.exe" />
+            <Button fx:id="minerPathButton" onAction="#findMinerPath" minWidth="90" text="Browse" />
         </HBox>
         <HBox alignment="CENTER" spacing="10">
-            <Label text="Your GRLM address" />
-            <TextField fx:id="GRLCAddressTextField" maxWidth="400" minWidth="400" promptText="e.g. GJbKUzCbAezNZuQJkahqptvT2CpYywMSFj" />
+            <TextField fx:id="GRLCAddressTextField" maxWidth="600" minWidth="600" promptText="Your GRLM address: e.g. GJbKUzCbAezNZuQJkahqptvT2CpYywMSFj" />
         </HBox>
         <HBox alignment="CENTER" spacing="10">
-            <Label text="Pool address" />
-            <TextField fx:id="poolAddressTextField" maxWidth="400" minWidth="400" promptText="e.g. stratum+tcp://freshgarlicblocks.net:3032" />
+            <TextField fx:id="poolAddressTextField" maxWidth="600" minWidth="600" promptText="Pool address: e.g. stratum+tcp://freshgarlicblocks.net:3032" />
         </HBox>
         <HBox alignment="CENTER" spacing="10">
-            <VBox>
+            <VBox spacing="3">
                 <Label text="Pool password" />
-                <TextField fx:id="poolPwordTextField" maxWidth="140" minWidth="140" promptText="Default: none (x)" />
+                <TextField fx:id="poolPwordTextField" maxWidth="193" minWidth="193" promptText="Default: none (x)" />
             </VBox>
-            <VBox>
+            <VBox spacing="3">
                 <Label text="Mining intensity" />
-                <TextField fx:id="minerIntensityTextField" maxWidth="140" minWidth="140" promptText="Default: 12" />
+                <TextField fx:id="minerIntensityTextField" maxWidth="194" minWidth="194" promptText="Default: 12" />
             </VBox>
-            <VBox>
+            <VBox spacing="3">
                 <Label text="Extra miner flags" />
-                <TextField fx:id="minerFlagsTextField" maxWidth="140" minWidth="140" promptText="e.g. --timeout=100" />
+                <TextField fx:id="minerFlagsTextField" maxWidth="193" minWidth="193" promptText="e.g. --timeout=100" />
             </VBox>
         </HBox>
         <HBox alignment="CENTER" spacing="10">
-            <Button fx:id="configLogsButton" onAction="#openLogConfig" text="Configure Logging" />
-            <Button fx:id="goButton" onAction="#loadAndRunMiner" text="Start Mining" />
+            <Button fx:id="configLogsButton" onAction="#openLogConfig" minWidth="195" text="Configure Logging" />
+            <Button fx:id="goButton" onAction="#loadAndRunMiner" minWidth="195" text="Start Mining" />
         </HBox>
     </VBox>
 
