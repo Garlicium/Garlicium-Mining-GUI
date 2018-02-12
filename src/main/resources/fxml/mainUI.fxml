@@ -14,18 +14,18 @@
 
 <?import javafx.scene.control.CheckBox?>
 <StackPane minHeight="700" minWidth="900" prefHeight="700" prefWidth="900" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.view.MainController">
-<<<<<<< Updated upstream
 
-    <VBox fx:id="setupVBox" alignment="CENTER" spacing="20">
-=======
     <VBox fx:id="setupVBox" alignment="CENTER" spacing="15">
->>>>>>> Stashed changes
         <VBox alignment="CENTER">
             <!-- Place these 2 closer together -->
-            <Label styleClass="title" text="GarlicGUI" textAlignment="CENTER" />
+            <HBox alignment="BASELINE_CENTER">
+                <Label styleClass="title-small" text="Garli" textAlignment="CENTER" />
+                <Label styleClass="title" text="GUI" textAlignment="CENTER" />
+                <Label styleClass="title-small" text="m" textAlignment="CENTER" />
+            </HBox>
             <Hyperlink fx:id="helpLink" text="help" textAlignment="CENTER" onAction="#openHelp" />
         </VBox>
-        <ImageView fx:id="garlicImg" fitHeight="227" fitWidth="227" preserveRatio="true">
+        <ImageView fx:id="garlicImg" fitHeight="227" fitWidth="227" smooth="true" preserveRatio="true">
             <Image url="@../images/garlicium.png" />
         </ImageView>
         <HBox alignment="CENTER" spacing="10">

@@ -18,6 +18,10 @@
     -fx-text-fill: black;
 }
 
+.title-small{
+    -fx-font-size: 40;
+}
+
 .title {
     -fx-font-size: 50;
 }
